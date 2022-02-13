@@ -16,19 +16,20 @@
       
 
       <form>
-        <div class="book">
+        <div method="post" class="book">
             <label for="title">Title</label>
-            <input id="title" type="text">
+            <input id="title" type="text" required>
             <label for="author">Author</label>
-            <input id="author" type="text">
+            <input id="author" type="text" required>
             <label for="pages">Pages</label>
-            <input id="pages"  type="number">
+            <input id="pages"  type="number" required>
             <label for="read">Read</label>
-            <input id="read" type="text">
+            <input id="read" type="text" required>
   
-            <button type="submit" class="add-book">Add</Address></button>
+            <button type='button' class="add-book">Add</button>
         </div>
       </form>
+
       <div class="details"></div>
         
 </body>
