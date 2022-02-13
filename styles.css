@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    background-color: peachpuff;
+}
+
+h1{
+    font-style: oblique;
+    font-size: 4rem;
+    position: absolute;
+    left: 5vw;
+    text-decoration: underline;
+    color: brown;
+}
+
+
+.add{
+    padding: 20px;
+    border-radius: 7px;
+    color: brown;
+    font-size: large;  
+    font-weight: 700;
+    box-shadow: 4px 4px 6px red;
+    position: absolute;
+    left: 5vw;
+    top: 15vh;
+}
+
+.add:hover{
+    background-color: brown;
+    color: white;
+    padding: 22px;
+}
+
+.book{
+    width: 20vw;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    background-color: peachpuff;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.book>label{
+    display: block;
+    margin: 4px;
+    font-size: 3rem;
+}
+
+.book>input{
+    padding: 15px 50px;
+    border-radius: 4px;
+}
+
+.add-book{
+    display: block;
+    padding: 10px;
+    font-size: 2rem;
+    margin-top: 10px;
+    border-radius: 5px;
+}
