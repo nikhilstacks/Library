@@ -100,6 +100,6 @@ function oppaClass(){
 
 //function for deleting a record
 function deleteRecord(){
-   
+   this.parentNode.remove();
 }
 
