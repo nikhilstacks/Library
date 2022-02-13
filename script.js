@@ -59,10 +59,17 @@ function objCreate(){
                            author: ${myLibrary[i].author} <br>
                            pages: ${myLibrary[i].pages} <br>
                            read: ${myLibrary[i].read} <br>`;
-                           display.appendChild(div);  
-                           
+    const deleteBook = document.createElement('button');
+    deleteBook.style.cssText = 'background-color: white;border-radius:4px;'
+    deleteBook.classList = 'delete';
+    deleteBook.innerText = '❌';
+    deleteBook.addEventListener('click', deleteRecord);
+
+
+    display.appendChild(div);                      
     error.innerText = '';
-    div.appendChild(paragraph);
+    div.appendChild(deleteBook);
+    div.appendChild(paragraph); 
     i++;
     reset();
   
@@ -91,4 +98,8 @@ function oppaClass(){
 }
 
 
+//function for deleting a record
+function deleteRecord(){
+   
+}
 
