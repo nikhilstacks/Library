@@ -51,10 +51,10 @@ function objCreate(){
   
   
     const div = document.createElement('div');
-    div.style.cssText = 'height: auto; width: 300px;margin: 10px;border-radius: 6px;border: 1px solid brown; box-shadow: 4px 4px 4px pink;';
+    div.style.cssText = 'height: auto; width: auto;margin: 10px;border-radius: 6px;border: 1px solid brown; box-shadow: 4px 4px 4px pink;';
 
     const paragraph = document.createElement('p');
-    paragraph.style.cssText = 'padding-left:24px;font-family: "Oswald", sans-serif;font-size:2.5rem;'
+    paragraph.style.cssText = 'padding:0 24px;font-family: "Oswald", sans-serif;font-size:2.5rem;'
     paragraph.innerHTML = `title: ${myLibrary[i].title} <br>
                            author: ${myLibrary[i].author} <br>
                            pages: ${myLibrary[i].pages} <br>

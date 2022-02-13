@@ -5,6 +5,7 @@ body{
     background-color: peachpuff;
 }
 
+
 h1{
     font-size: 4rem;
     position: absolute;
@@ -14,7 +15,7 @@ h1{
     color: brown;
 }
 
-
+/*add button styles*/
 .add{
     padding: 20px;
     border-radius: 7px;
