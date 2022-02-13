@@ -15,4 +15,22 @@ Books.prototype.setStars = () => {
 
 const hobbit = new Books('hobbit', 'al da dor', 500, 'haven\'t read yet');
 
+const add = document.querySelector('.add');
+add.addEventListener('click', oppaClass);
 
+const addCart = document.querySelector('.book');
+
+function oppaClass(){ 
+ document.body.style.cssText = "background-color: grey;";
+ document.querySelector('.main').style.cssText = "opacity: 30%;";
+ addCart.style.cssText = 'opacity: 100%;';
+}
+
+const addBook = document.querySelector('.add-book');
+addBook.addEventListener('click', defaultStyle);
+
+function defaultStyle(){
+ document.body.style.cssText = "background-color: peachpuff;";
+ document.querySelector('.main').style.cssText = "opacity: 100%;";
+ addCart.style.cssText = 'opacity: 0;';
+}

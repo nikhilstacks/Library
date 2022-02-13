@@ -34,22 +34,31 @@ h1{
 .book{
     width: 20vw;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 45%;
     background-color: peachpuff;
     border-radius: 10px;
     opacity: 0;
+    padding: 4rem;
 }
 
 .book>label{
     display: block;
     margin: 4px;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .book>input{
-    padding: 15px 50px;
     border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
 
 .add-book{
