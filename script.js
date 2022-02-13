@@ -4,6 +4,7 @@ const author = document.querySelector('#author');
 const pages = document.querySelector('#pages');
 const read = document.querySelector('#read');
 const display = document.querySelector('.details');
+const error = document.querySelector('.error');
 
 //constructor
 function Books(title, author, pages, read){
@@ -32,25 +33,39 @@ let newBook = 0;
 
 //creating objects for new books
 function addBooks(){
-
+  if(title.value != '' && author.value != '' && pages.value != '' && read.value != '')
+  {
   newBook = new Books(title.value, author.value, pages.value, read.value);
   myLibrary.push(newBook);
   objCreate();
-
+  }
+  else {
+    error.style.cssText = 'color: red;'
+    error.innerText = 'Not valid values';
+    reset();
+  }
 }
   let i = 0;
 //inserting details div in the dom tree
 function objCreate(){
-  const div = document.createElement('div');
-  div.style.cssText = 'height: 300px; width: 300px;margin: 10px;border-radius: 6px;';
-  display.appendChild(div);
+  
+  
+    const div = document.createElement('div');
+    div.style.cssText = 'height: auto; width: 300px;margin: 10px;border-radius: 6px;border: 1px solid brown; box-shadow: 4px 4px 4px pink;';
 
-  const paragraph = document.createElement('p');
-  paragraph.innerText = `title: ${myLibrary[i].title}`;
-  div.appendChild(paragraph);  
-  i++;
-
-  reset();
+    const paragraph = document.createElement('p');
+    paragraph.style.cssText = 'padding-left:24px;font-family: "Oswald", sans-serif;font-size:2.5rem;'
+    paragraph.innerHTML = `title: ${myLibrary[i].title} <br>
+                           author: ${myLibrary[i].author} <br>
+                           pages: ${myLibrary[i].pages} <br>
+                           read: ${myLibrary[i].read} <br>`;
+                           display.appendChild(div);  
+                           
+    error.innerText = '';
+    div.appendChild(paragraph);
+    i++;
+    reset();
+  
 }
 
 //for reseting the value of the fields
@@ -71,7 +86,7 @@ add.addEventListener('click', oppaClass);
 function oppaClass(){ 
  document.body.style.cssText = "background-color: grey;";
  document.querySelector('.main').style.cssText = "opacity: 10%;";
- addCart.style.cssText = 'opacity: 100%; display: block;';
+ addCart.style.cssText = 'opacity: 100%; visibility: visible;';
 
 }
 

@@ -12,19 +12,20 @@
       <div class="main">
         <h1>Library</h1>
         <button class="add">Add book +</button>
+        <h2 class="error"></h2>
       </div>
       
 
-      <form>
-        <div method="post" class="book">
+      <form method="post">
+        <div class="book">
             <label for="title">Title</label>
-            <input id="title" type="text" required>
+            <input name="title" id="title" type="text" />
             <label for="author">Author</label>
-            <input id="author" type="text" required>
+            <input name="author" id="author" type="text"  />
             <label for="pages">Pages</label>
-            <input id="pages"  type="number" required>
+            <input id="pages" name="pages" type="number"  />
             <label for="read">Read</label>
-            <input id="read" type="text" required>
+            <input id="read" type="text" name="read"  />
   
             <button type='button' class="add-book">Add</button>
         </div>
