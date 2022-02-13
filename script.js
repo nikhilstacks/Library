@@ -5,15 +5,23 @@ function Books(title, author, pages, read){
   this.read = read;
 }
 
-function addBookToLibrary() {
-    
-}
-//starting using back ticks over quotes
-Books.prototype.setStars = () => {
-  this.book = 'book';
-};
+const myLibrary = [];
 
-const hobbit = new Books('hobbit', 'al da dor', 500, 'haven\'t read yet');
+function addBookToLibrary() {
+  document.body.style.cssText = "background-color: peachpuff;";
+  document.querySelector('.main').style.cssText = "opacity: 100%;";
+  addCart.style.cssText = 'opacity: 0;';
+
+
+  let title = document.querySelector('#title');
+  let author = document.querySelector('#author');
+  let pages = document.querySelector('#pages');
+  let read = document.querySelector('#read');
+
+  
+  let newBook = new Books(title.value, author.value, pages.value, read.value);
+  myLibrary.push(newBook);
+}
 
 const add = document.querySelector('.add');
 add.addEventListener('click', oppaClass);
@@ -22,15 +30,11 @@ const addCart = document.querySelector('.book');
 
 function oppaClass(){ 
  document.body.style.cssText = "background-color: grey;";
- document.querySelector('.main').style.cssText = "opacity: 30%;";
+ document.querySelector('.main').style.cssText = "opacity: 10%;";
  addCart.style.cssText = 'opacity: 100%;';
 }
 
 const addBook = document.querySelector('.add-book');
-addBook.addEventListener('click', defaultStyle);
+addBook.addEventListener('click', addBookToLibrary);
 
-function defaultStyle(){
- document.body.style.cssText = "background-color: peachpuff;";
- document.querySelector('.main').style.cssText = "opacity: 100%;";
- addCart.style.cssText = 'opacity: 0;';
-}
+console.log(myLibrary);
