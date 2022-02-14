@@ -18,7 +18,7 @@ addBook.addEventListener('click', addBookToLibrary);
 const add = document.querySelector('.add');
 add.addEventListener('click', oppaClass);
 
-//constructor
+//class
 class Books{
   constructor(title, author, pages, read){
     this.title = title;
@@ -27,7 +27,7 @@ class Books{
     this.read = read;
   }
 
-  //event handler for details div
+//event handler for details div
   addBookToLibrary() {
   document.body.style.cssText = "background-color: peachpuff;";
   document.querySelector('.main').style.cssText = "opacity: 100%;";
